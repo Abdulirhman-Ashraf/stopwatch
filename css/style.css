@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(180deg, #f093fb 0%, #f5576c 100%);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.container {
+    max-height: 100vh;
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.stopwatch {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 10px;
+
+}
+
+svg {
+    font-size: 20px;
+
+}
+
+h1 {
+    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+.timer {
+    background-color: white;
+    width: 100%;
+    font-size: 30px;
+    padding: 10px;
+    animation: timer-screen alternate .3s infinite;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+}
+
+@keyframes timer-screen {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.03);
+
+    }
+}
+
+button {
+    background-color: #f5576c;
+    color: #eee;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color .3s ease-in-out;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #ec2943;
+
+}
+
+.labs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: start;
+    gap: 1.2rem;
+}
+
+.lap-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    max-height: 200px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+ul li {
+    padding: 16px;
+    border-bottom: 4px solid #ecdfe0;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+ul li span {
+    font-weight: 700;
+}
+
+@media (max-width:440px) {
+    .container {
+        margin: 30px;
+    }
+
+    .controls button {
+        width: 100%;
+        display: inline-block;
+    }
+
+    .timer {
+        font-size: 20px;
+        padding: 10px;
+        width: 90%;
+
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .lap-title {
+        font-size: 20px;
+    }
+}
